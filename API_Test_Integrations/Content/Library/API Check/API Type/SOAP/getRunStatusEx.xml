@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flow id="eba039c5-aabd-4a47-aaac-72264da29221">
-  <descriptionCdata><![CDATA[eba039c5-aabd-4a47-aaac-72264da29221.37ba1e79-6bbb-4bc7-81ad-eea1f6e5e11c.description=<pre>\n\n</pre>
-eba039c5-aabd-4a47-aaac-72264da29221.39258444-f42b-4397-b987-d7b8f2ad8b2a.description=<pre>\n\n</pre>
-eba039c5-aabd-4a47-aaac-72264da29221.93141a82-670a-4ce2-aad2-bcf25dab8ffa.description=<pre>Invokes web service methods.  This operation should not be used directly\!  Please use the wizard to build flows that use this operation.\n\nInputs\:\nxmlTemplate - The template of the soap request to make.\ninputMap - A map used to map between template names and user-friendly names. The tamplate names are pipe-delimited xpaths of the xmltemplate location, with a numerical element for lists.\nurl - The url to post to. \nheader_SOAPAction - The SOAPAction http header field, defined by many web services for indicating the intent of the request\nwswAuthenticationType - The authentication type to use for the username and password input. http is default (Uses http authentication), other options are 'ntlm', 'ws-security digest' and 'ws-security text' WARNING\: ws-security text transmits passwords in clear-text\nWSSecuritySignRequest - true or false, should the SOAP request be signed using WS-Security.\nWSSecurityEncryptRequest - true or false, should the entire SOAP request be signed using WS-Security\nWSSecurityTimestampRequest - true or false, should the Timestamp attribute be added to the WS-Security header\nWSSecurityKeystore - keystore to use for encrypting and signing requests.\nWSSecurityKeystoreType - The type of WSSecurityKeystore.\nWSSecurityKeystorePassword - The password for WSSecurityKeystore.\ncontentType - Value to be used in the Content-Type http header\ncharacterSet - The characterSet for HTTP Get request and response. Default is UTF-8.\nusername - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\npassword - The password to use for authenticating with the web service\ntrustAllRoots - Enables weak security over SSL. A SSH certificate is trusted even if no trusted CA issued it. valid options are\: true/false.\nuseCookies - Enables cookie tracking. Cookies will be stored between consecutive calls. valid options are\: true/false.\nusesJSON - Use JSON arrays for the SOAP Request for all Array types. valid options are\: true/false.\ntimeout - a timeout after which the connection should be terminated, or 0 for no timeout.\nproxy - A proxy to use when accessing the web service.\nproxyPort - A port on the proxy to connect to.\nproxyUsername - A username to use when connecting to the proxy.\nproxyPassword - A password to use when connecting to the proxy.\nkeystore - the path to the keystore to use for SSL Client Certificates when using http authentication\nkeystorePassword - the password for the keystore when using http authentication\nICONCLUDE_WSW_VERSION - This value is used internally by the operation\nreturnXMLRequest - If this input is set to true, a new output named rawXMLRequest is returned from the operation which contains the text of the SOAP request that will be sent. This can be very valuable in troubleshooting.\n\nAny additional inputs that follow these are added by the Web Service Wizard, and they are specific to the particular web service method being called.\n\nResponses\:\nsuccess - SOAP request completed successfully.\nfailure - something went wrong.\n\nReturns\:\ndocument - raw XML response\ndocumentStripped - raw XML response stripped of namespaces for ease in parsing with XML XPath operations\njsonStripped - raw XML response stripped of namespaces for ease in parsing with JSON operations, input usesJSON must be set to true for this to be populated.\n\nNotes\:\nIf you add new step-level inputs with the name header_<headername>, where <headername> is the name of an html header, then that html header will be set to the given value in the HTTP request.\n\n</pre>
-eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created by the Web Services Wizard to invoke the getRunStatusEx operation on https\://myd-vm01750.hpswlabs.adapps.hp.com\:8443/PAS/services/WSCentralService?wsdl. Note that the inputs to this flow which correspond to web service inputs are optional inputs.  This is due to the fact that web services definitions usually incorrectly indicate that too many inputs are required, and mirroring those settings in the flow would force you to enter unused values when running the flow.  The xmlTemplate input on the Invoke Method 2 step of this flow contains a template of the xml message to be sent, and the fields preceded by the comment "<\!--Optional\:-->" or "<\!--zero or more repetitions-->" are those which the web service indicates are optional; all others are indicated to be required.\n\nInputs\:\n    webserviceHost - The host that is running the web service\n    webservicePort - The port on the host running the web service\n    username - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\n    password - The password to use for authenticating with the web service.\n    getRunStatusEx.options.primaryResultWanted - The input named getRunStatusEx|options|primaryResultWanted of the complex type\: getRunStatusEx|options\n    getRunStatusEx.options.rawResultWanted - The input named getRunStatusEx|options|rawResultWanted of the complex type\: getRunStatusEx|options\n    getRunStatusEx.runHandle.runID - The input named getRunStatusEx|runHandle|runID of the complex type\: getRunStatusEx|runHandle\n    getRunStatusEx.runHandle.statusCursor.cursorPosition - The input named getRunStatusEx|runHandle|statusCursor|cursorPosition of the complex type\: getRunStatusEx|runHandle|statusCursor\n\nResults\:\n    document - The raw XML response of the web service\n    documentStripped - The XML response of the web service stripped of namespaces\n    primaryResult - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/primaryResult/text()\n    rawResult - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/rawResult/text()\n    runID - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runHandle/runID/text()\n    cursorPosition - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runHandle/statusCursor/cursorPosition/text()\n    runReportUrl - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runReportUrl/text()\n    runResponse - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runResponse/text()\n    runResumeUrl - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runResumeUrl/text()\n    status - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/status/text()\n    primaryResultWanted - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/statusOptions/primaryResultWanted/text()\n    rawResultWanted - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/statusOptions/rawResultWanted/text()\n    steps - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/steps/text()\n\nResponses\:\n    success - The SOAP command was accepted by the web service\n    failure - Something went wrong while making the SOAP request\n</pre>
+<flow id="e9961b67-40d1-4aa0-9b32-d8de0af22c7b">
+  <descriptionCdata><![CDATA[e9961b67-40d1-4aa0-9b32-d8de0af22c7b.0ed26229-2384-46f1-a462-05b9db5c01a1.description=<pre>\n\n</pre>
+e9961b67-40d1-4aa0-9b32-d8de0af22c7b.18d08af2-31bd-4a23-950d-324cec8f886e.description=<pre>Invokes web service methods.  This operation should not be used directly\!  Please use the wizard to build flows that use this operation.\n\nInputs\:\nxmlTemplate - The template of the soap request to make.\ninputMap - A map used to map between template names and user-friendly names. The tamplate names are pipe-delimited xpaths of the xmltemplate location, with a numerical element for lists.\nurl - The url to post to. \nheader_SOAPAction - The SOAPAction http header field, defined by many web services for indicating the intent of the request\nwswAuthenticationType - The authentication type to use for the username and password input. http is default (Uses http authentication), other options are 'ntlm', 'ws-security digest' and 'ws-security text' WARNING\: ws-security text transmits passwords in clear-text\nWSSecuritySignRequest - true or false, should the SOAP request be signed using WS-Security.\nWSSecurityEncryptRequest - true or false, should the entire SOAP request be signed using WS-Security\nWSSecurityTimestampRequest - true or false, should the Timestamp attribute be added to the WS-Security header\nWSSecurityKeystore - keystore to use for encrypting and signing requests.\nWSSecurityKeystoreType - The type of WSSecurityKeystore.\nWSSecurityKeystorePassword - The password for WSSecurityKeystore.\ncontentType - Value to be used in the Content-Type http header\ncharacterSet - The characterSet for HTTP Get request and response. Default is UTF-8.\nusername - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\npassword - The password to use for authenticating with the web service\ntrustAllRoots - Enables weak security over SSL. A SSH certificate is trusted even if no trusted CA issued it. valid options are\: true/false.\nuseCookies - Enables cookie tracking. Cookies will be stored between consecutive calls. valid options are\: true/false.\nusesJSON - Use JSON arrays for the SOAP Request for all Array types. valid options are\: true/false.\ntimeout - a timeout after which the connection should be terminated, or 0 for no timeout.\nproxy - A proxy to use when accessing the web service.\nproxyPort - A port on the proxy to connect to.\nproxyUsername - A username to use when connecting to the proxy.\nproxyPassword - A password to use when connecting to the proxy.\nkeystore - the path to the keystore to use for SSL Client Certificates when using http authentication\nkeystorePassword - the password for the keystore when using http authentication\nICONCLUDE_WSW_VERSION - This value is used internally by the operation\nreturnXMLRequest - If this input is set to true, a new output named rawXMLRequest is returned from the operation which contains the text of the SOAP request that will be sent. This can be very valuable in troubleshooting.\n\nAny additional inputs that follow these are added by the Web Service Wizard, and they are specific to the particular web service method being called.\n\nResponses\:\nsuccess - SOAP request completed successfully.\nfailure - something went wrong.\n\nReturns\:\ndocument - raw XML response\ndocumentStripped - raw XML response stripped of namespaces for ease in parsing with XML XPath operations\njsonStripped - raw XML response stripped of namespaces for ease in parsing with JSON operations, input usesJSON must be set to true for this to be populated.\n\nNotes\:\nIf you add new step-level inputs with the name header_<headername>, where <headername> is the name of an html header, then that html header will be set to the given value in the HTTP request.\n\n</pre>
+e9961b67-40d1-4aa0-9b32-d8de0af22c7b.description=<pre>\nThis subflow was created by the Web Services Wizard to invoke the getRunStatusEx operation on https\://myd-vm01750.hpswlabs.adapps.hp.com\:8443/PAS/services/WSCentralService?wsdl. Note that the inputs to this flow which correspond to web service inputs are optional inputs.  This is due to the fact that web services definitions usually incorrectly indicate that too many inputs are required, and mirroring those settings in the flow would force you to enter unused values when running the flow.  The xmlTemplate input on the Invoke Method 2 step of this flow contains a template of the xml message to be sent, and the fields preceded by the comment "<\!--Optional\:-->" or "<\!--zero or more repetitions-->" are those which the web service indicates are optional; all others are indicated to be required.\n\nInputs\:\n    webserviceHost - The host that is running the web service\n    webservicePort - The port on the host running the web service\n    username - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\n    password - The password to use for authenticating with the web service.\n    getRunStatusEx.options.primaryResultWanted - The input named getRunStatusEx|options|primaryResultWanted of the complex type\: getRunStatusEx|options\n    getRunStatusEx.options.rawResultWanted - The input named getRunStatusEx|options|rawResultWanted of the complex type\: getRunStatusEx|options\n    getRunStatusEx.runHandle.runID - The input named getRunStatusEx|runHandle|runID of the complex type\: getRunStatusEx|runHandle\n    getRunStatusEx.runHandle.statusCursor.cursorPosition - The input named getRunStatusEx|runHandle|statusCursor|cursorPosition of the complex type\: getRunStatusEx|runHandle|statusCursor\n\nResults\:\n    document - The raw XML response of the web service\n    documentStripped - The XML response of the web service stripped of namespaces\n    primaryResult - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/primaryResult/text()\n    rawResult - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/rawResult/text()\n    runID - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runHandle/runID/text()\n    cursorPosition - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runHandle/statusCursor/cursorPosition/text()\n    runReportUrl - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runReportUrl/text()\n    runResponse - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runResponse/text()\n    runResumeUrl - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runResumeUrl/text()\n    status - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/status/text()\n    primaryResultWanted - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/statusOptions/primaryResultWanted/text()\n    rawResultWanted - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/statusOptions/rawResultWanted/text()\n    steps - The output given by the XPath\: /Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/steps/text()\n\nResponses\:\n    success - The SOAP command was accepted by the web service\n    failure - Something went wrong while making the SOAP request\n</pre>
+e9961b67-40d1-4aa0-9b32-d8de0af22c7b.e3f8b95d-a562-4e35-90d3-cd42921bc268.description=<pre>\n\n</pre>
 ]]></descriptionCdata>
-  <annotation>eba039c5-aabd-4a47-aaac-72264da29221.description</annotation>
+  <annotation>e9961b67-40d1-4aa0-9b32-d8de0af22c7b.description</annotation>
   <name>getRunStatusEx</name>
   <categories/>
   <inputs>
-    <staticBinding id="fccc810a-da50-4308-9fad-f92de5c04af1">
+    <staticBinding id="22218ed7-2614-43f7-9a6b-035816aaf1dd">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -22,7 +22,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <value>${OO2OO-API_Check/centralHost}</value>
       <record>false</record>
     </staticBinding>
-    <staticBinding id="ad4742bb-4e05-4e19-b093-d5bceb54b248">
+    <staticBinding id="377e4840-ee60-46ad-a9ce-68947d3523e4">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -35,7 +35,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <value>${OO2OO-API_Check/centralPort}</value>
       <record>false</record>
     </staticBinding>
-    <identityBinding id="c4b5211a-6d5d-4bc9-8694-529dc3b15d0b">
+    <identityBinding id="6ccaa0f6-9412-48c9-8973-d61b3263ebd5">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -52,7 +52,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       </link>
       <identityAttribute>USERNAME</identityAttribute>
     </identityBinding>
-    <identityBinding id="f84ec706-6934-4815-8ec1-cacc9a8f4142">
+    <identityBinding id="9a0be5a1-e9f9-419b-892e-c3b40445cbee">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -69,7 +69,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       </link>
       <identityAttribute>PASSWORD</identityAttribute>
     </identityBinding>
-    <staticBinding id="7051199d-23a6-436e-be71-9a6e96ea8ec0">
+    <staticBinding id="ce756301-1d6d-4d9c-8356-b054bad3bc71">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -82,7 +82,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <value>true</value>
       <record>false</record>
     </staticBinding>
-    <staticBinding id="5bcc4dbb-6c81-436f-a73d-83e75c97149d">
+    <staticBinding id="f962545c-ebb8-4d48-a4d2-d783efca2417">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -95,7 +95,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <value>true</value>
       <record>false</record>
     </staticBinding>
-    <staticBinding id="befa41e9-a0dd-4d13-aae4-7aab4b538ed0">
+    <staticBinding id="70dae737-5e78-40f9-a152-5a42e36ab5ee">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -105,10 +105,10 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <isPersisted>false</isPersisted>
       <inputSymbol>getRunStatusEx.runHandle.runID</inputSymbol>
       <listDelimiter>,</listDelimiter>
-      <value>194001600</value>
+      <value>194002851</value>
       <record>false</record>
     </staticBinding>
-    <staticBinding id="da9d436d-882d-41a7-bd50-d2bdbf33bdf1">
+    <staticBinding id="5b19406f-6a76-4f25-8248-2104cd3973f9">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -123,7 +123,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
     </staticBinding>
   </inputs>
   <possibleResponses>
-    <opResponse id="b360a021-d670-4bd3-a657-4b1057ce4fd4">
+    <opResponse id="15a9eeac-d393-40ad-a79f-abdaf724af9a">
       <annotation></annotation>
       <name>success</name>
       <isDefault>false</isDefault>
@@ -131,7 +131,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <type>RESOLVED</type>
       <matchRules/>
     </opResponse>
-    <opResponse id="1a3cddda-db72-4dd8-ad11-26de3e0f3eec">
+    <opResponse id="dab903d5-f31c-4135-a50a-8c79017fae45">
       <annotation></annotation>
       <name>failure</name>
       <isDefault>false</isDefault>
@@ -141,14 +141,14 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
     </opResponse>
   </possibleResponses>
   <availableResultExpressions/>
-  <resultExpression id="e6ba7e48-3bbb-4f74-8611-91fc52269e40">
+  <resultExpression id="02e12bd5-692e-42b9-b75e-245a2db57a2e">
     <annotation></annotation>
     <name>document</name>
     <fieldName>document</fieldName>
     <sourceType>RAWRESULT</sourceType>
     <filters/>
   </resultExpression>
-  <iconSpec id="36807fc3-394c-4cbf-9fb5-645bcb0fad40">
+  <iconSpec id="ede84976-6267-4b62-9a75-3bce5f0e57b9">
     <baseIcon>flow.png</baseIcon>
     <basePath>System</basePath>
     <readOnly>false</readOnly>
@@ -159,8 +159,8 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
   <compatibleRuntimeContext>false</compatibleRuntimeContext>
   <historyCheckPointFlow>false</historyCheckPointFlow>
   <steps>
-    <step id="93141a82-670a-4ce2-aad2-bcf25dab8ffa">
-      <annotation>eba039c5-aabd-4a47-aaac-72264da29221.93141a82-670a-4ce2-aad2-bcf25dab8ffa.description</annotation>
+    <step id="18d08af2-31bd-4a23-950d-324cec8f886e">
+      <annotation>e9961b67-40d1-4aa0-9b32-d8de0af22c7b.18d08af2-31bd-4a23-950d-324cec8f886e.description</annotation>
       <name>Invoke Method 2</name>
       <bounds>
         <x>0.0</x>
@@ -168,12 +168,12 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
-      <iconSpec id="4c62a4a2-b232-4ecf-86e8-f4160fd2d9cc">
+      <iconSpec id="82a6f447-ba12-4294-9e2e-a45b434841bc">
         <baseIcon>generic_server_plain.png</baseIcon>
         <basePath>Servers/</basePath>
         <readOnly>false</readOnly>
         <layers>
-          <iconSpec id="cb587a98-818b-46c4-a403-0dc087eac544">
+          <iconSpec id="aa042ff4-b33a-4303-8253-ba7313584323">
             <baseIcon>remote.png</baseIcon>
             <basePath>Annotations/</basePath>
             <readOnly>false</readOnly>
@@ -195,7 +195,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <resultContextKey>Invoke Method 2</resultContextKey>
       <userPrompt></userPrompt>
       <bindings>
-        <staticBinding id="c6b7b67f-4e1c-4303-93d1-d6e6104bb7f2">
+        <staticBinding id="ec2bfbb6-3522-4e56-89f6-f93562bd3d85">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -207,7 +207,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
           <value>${OO2OO-API_Check/centralProtocol}://${webserviceHost}:${webservicePort}/PAS/services/WSCentralService</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="0cc9ef73-8bb7-4b82-afd2-c868baef418b">
+        <staticBinding id="bbcc21bb-9707-404f-a267-7ed092eab72c">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -235,7 +235,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
 &lt;/soapenv:Envelope&gt;</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="e091ef72-e4d2-4674-a249-2dfea82f9ea8">
+        <staticBinding id="b00669ae-b444-4cba-959e-980825a92808">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -247,7 +247,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="451a934f-0909-49ee-9b0a-19fbbdcd9787">
+        <staticBinding id="740781ed-19ef-4e12-ae85-10d51ec9daeb">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -262,7 +262,7 @@ getRunStatusEx|runHandle|runID=getRunStatusEx.runHandle.runID
 getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.statusCursor.cursorPosition</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="05f5b525-0636-4437-b2de-c2b9a1b92954">
+        <staticBinding id="fcd27c57-b3a1-4c15-a952-6084202ff840">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -274,7 +274,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="0bc41466-d357-45ac-8599-ee7c8dcf9e76">
+        <staticBinding id="dbe8aa8d-2a6f-487b-9cc6-b2f1025ba536">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -286,7 +286,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>${username}</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="8765780f-da48-4855-aff0-9735f8d10319">
+        <staticBinding id="f58fe74c-d46b-41c2-914e-aa5d05240a4a">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -298,7 +298,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>${password}</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="23c99cc1-19bb-44a8-9a73-0fcca79ec065">
+        <staticBinding id="cb7c6c35-861c-409a-9cb8-00df9f81f3c3">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -310,7 +310,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>http</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="107fed7d-3334-44bc-ac39-d9ffec34d184">
+        <staticBinding id="3cfffac2-e095-40aa-ae85-278f8765dd36">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -322,7 +322,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="f14a9951-71c5-40a0-b550-f109e5fe3d7e">
+        <staticBinding id="f07bf981-d22a-4383-b780-3a2f484c0423">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -334,7 +334,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="e71b9e0c-11f8-4a70-85d7-765d48cf57d8">
+        <staticBinding id="e308ccdb-29a8-4122-8f28-589a7d91a14e">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -346,7 +346,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="4b3c274c-858d-4c24-9f4f-939c245873a9">
+        <staticBinding id="438a8224-8df6-499a-9285-8c63b787e9ba">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -358,7 +358,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="96fa2adc-9cb3-4a95-aaa5-6d28a6f38c5c">
+        <staticBinding id="acf50e90-5edb-4a25-9dc5-173256776a37">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -370,7 +370,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="b92822d4-3ed0-4608-9971-c9824467aeee">
+        <staticBinding id="35bb370c-2623-4647-98b1-13a8685e8064">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>ENCRYPTED</inputType>
@@ -382,7 +382,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="87f7d548-5175-4be8-b12e-081caeee0b80">
+        <staticBinding id="6272c291-e193-44c8-b214-d2e04da2e402">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -394,7 +394,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>text/xml</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="c2f5a005-1746-41ed-a3f9-fb2b2750fdb3">
+        <staticBinding id="4a90a3df-0a81-4cbf-97a8-5887f8495167">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -406,7 +406,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>UTF-8</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="094e4e60-49a5-4c97-a9c6-3e2b8eb66e50">
+        <staticBinding id="23444620-0ef7-4b14-ae94-853511f575b5">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -418,7 +418,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>true</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="4e49a6cb-9d03-4ebc-a392-c0e8c58dacc9">
+        <staticBinding id="88603667-332a-4360-a3ee-7cb043fda8c1">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -430,7 +430,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>true</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="e7590e52-9bcc-4323-a5f4-031f75faa3bf">
+        <staticBinding id="1241cca3-c71d-4ad3-acb5-11bb3ab49e41">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -442,7 +442,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="308d0c4a-53e5-4e13-a1e3-ab3051b3caf1">
+        <staticBinding id="cc3a2548-d746-4e5c-9b8d-d1f83aa00ea5">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -454,7 +454,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="be9748d0-d886-4acd-8f00-8fe053bc487a">
+        <staticBinding id="dd0eb292-23be-4c01-904f-85116d39f646">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -466,7 +466,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="d54b7f5b-fc22-41aa-9f56-0b8ecab3a10d">
+        <staticBinding id="5c1316db-dce0-40f6-86f1-76fa15d16b3a">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -478,7 +478,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="00a3558f-cf40-4832-adec-fe7b390e54c2">
+        <staticBinding id="22097cbc-a3e8-43f4-ae4f-60ae96902ff7">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>ENCRYPTED</inputType>
@@ -490,7 +490,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="3f20ce66-f2de-472d-a382-b6d38752a6c2">
+        <staticBinding id="4cd6479b-56ac-4886-961e-3f2bb7fee2b0">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -502,7 +502,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="1dbf623a-3bae-4c18-ae89-22047d428ac5">
+        <staticBinding id="0369a03d-2ba5-4361-bfa2-4f860b85fae2">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>ENCRYPTED</inputType>
@@ -514,7 +514,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="798fbbee-a61d-4d16-a2c5-e1f261398efe">
+        <staticBinding id="f634af86-710d-41f9-a324-9c00c8fdc098">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -526,7 +526,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>2</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="91b526b5-0c9f-42f9-af66-24d9e996df4c">
+        <staticBinding id="befb76e6-6869-48db-8d85-b2f6a8fd7c39">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -538,7 +538,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="c4043312-447c-444d-a80a-ad12f2b09d6e">
+        <staticBinding id="7bcaed49-06ed-402b-80de-529f311d060c">
           <fromContextKey>getRunStatusEx.options.primaryResultWanted</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -551,7 +551,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="04752056-f6b7-480c-828f-04f96f861bac">
+        <staticBinding id="b7da14f9-724f-4767-9b14-7268516fc111">
           <fromContextKey>getRunStatusEx.options.rawResultWanted</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -564,7 +564,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="7ded97b4-e3ea-497d-b8dd-2288bf7e3feb">
+        <staticBinding id="609e3d8f-ed46-4260-aa2a-0edf1437b57d">
           <fromContextKey>getRunStatusEx.runHandle.runID</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -577,7 +577,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="846e2498-3725-40a9-bb9b-e66cabc4f135">
+        <staticBinding id="40ef95d5-a6da-4e3c-a191-d26bc86f10e2">
           <fromContextKey>getRunStatusEx.runHandle.statusCursor.cursorPosition</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -592,7 +592,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
         </staticBinding>
       </bindings>
       <transitions>
-        <transition id="20682844-d164-446b-8b23-79a6003f6704">
+        <transition id="d585b7cf-afd7-4820-a758-20ca9e988b98">
           <annotation></annotation>
           <name>success</name>
           <command>NEXT</command>
@@ -601,10 +601,10 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>39258444-f42b-4397-b987-d7b8f2ad8b2a</refId>
+            <refId>e3f8b95d-a562-4e35-90d3-cd42921bc268</refId>
           </destination>
           <source>
-            <refId>93141a82-670a-4ce2-aad2-bcf25dab8ffa</refId>
+            <refId>18d08af2-31bd-4a23-950d-324cec8f886e</refId>
           </source>
           <positions/>
           <labelPosition>
@@ -612,7 +612,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             <y>0.0</y>
           </labelPosition>
         </transition>
-        <transition id="3c995f1f-5775-4453-9d49-664739ee90cb">
+        <transition id="813c2553-052d-4ecb-9574-4432c4a4e8f2">
           <annotation></annotation>
           <name>failure</name>
           <command>NEXT</command>
@@ -621,10 +621,10 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>37ba1e79-6bbb-4bc7-81ad-eea1f6e5e11c</refId>
+            <refId>0ed26229-2384-46f1-a462-05b9db5c01a1</refId>
           </destination>
           <source>
-            <refId>93141a82-670a-4ce2-aad2-bcf25dab8ffa</refId>
+            <refId>18d08af2-31bd-4a23-950d-324cec8f886e</refId>
           </source>
           <positions/>
           <labelPosition>
@@ -638,13 +638,13 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
         <refId>962ffbf8-4105-46bb-8c71-84f037c4de61</refId>
       </opRef>
       <assignments>
-        <flowVariableAssignment id="71776ed5-8947-4753-812b-8b89168279e7">
+        <flowVariableAssignment id="f1edf0fd-b0a7-4631-8fdd-9fdb772e4abb">
           <annotation></annotation>
           <name>assignment</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
           <contextKey>requestStatus</contextKey>
-          <expression id="3da81810-c3f1-4600-800d-8190fcfecbb1">
+          <expression id="56369260-7040-44bb-a4bb-c0a7b8645e06">
             <annotation></annotation>
             <name>Result Field: status</name>
             <fieldName>status</fieldName>
@@ -652,13 +652,13 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             <filters/>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="f6584508-016e-43d9-8b85-13d22af6cc4a">
+        <flowVariableAssignment id="b949ea80-72b9-4d8f-96f1-29bc4a5d28da">
           <annotation></annotation>
           <name>document</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>document</contextKey>
-          <expression id="35affb17-d28c-4e4e-831b-416de72f215a">
+          <expression id="1e77ec05-eaa8-46b2-be8e-8b15bc668898">
             <annotation></annotation>
             <name>document</name>
             <fieldName>document</fieldName>
@@ -666,13 +666,13 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             <filters/>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="b19add87-b065-4bd5-be85-a08321dde5f7">
+        <flowVariableAssignment id="8541e5b3-3345-4ec2-a51e-73f9ad205c84">
           <annotation></annotation>
           <name>documentStripped</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>documentStripped</contextKey>
-          <expression id="7078128e-6839-423e-b05a-f884a772410d">
+          <expression id="923f90da-f3e7-4c0b-882f-7e7491d5a40a">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
@@ -680,19 +680,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             <filters/>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="ada5a4dd-dfcd-480b-85c8-ca32513d790e">
+        <flowVariableAssignment id="cd79e8d2-cc1c-4601-9f8a-e9a540ba9e97">
           <annotation></annotation>
           <name>primaryResult</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>primaryResult</contextKey>
-          <expression id="12dbc46d-1d13-49e0-b5d5-81b9a5e12d22">
+          <expression id="f5bf8cea-b73f-4a10-8d19-e6b35b4aef43">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="c5b28dc0-eb3b-4071-9b80-331d5c0e1dd2">
+              <xpathFilter id="be74553e-c302-43b6-9bbc-7842bb6923de">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/primaryResult/text()</xpathQuery>
@@ -700,19 +700,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="678e124a-35c2-4849-b69a-9c94b45f4365">
+        <flowVariableAssignment id="652b6f21-5573-4156-9239-002a5fd9fbe0">
           <annotation></annotation>
           <name>rawResult</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>rawResult</contextKey>
-          <expression id="d5532529-a5c1-4957-9e56-693a428343d2">
+          <expression id="ddfdd279-44ae-4b1b-be97-0658b1cd6562">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="63b2f5a2-1aa8-473c-9b5e-e92fecd4d3b0">
+              <xpathFilter id="f99974be-1b6a-4dda-b3d4-25f15cb332f1">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/rawResult/text()</xpathQuery>
@@ -720,19 +720,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="b51284dc-ecd3-4779-ae52-2f4f799d01f6">
+        <flowVariableAssignment id="5296643a-1d9a-45ac-9faa-c745fc6ef1b2">
           <annotation></annotation>
           <name>runID</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>runID</contextKey>
-          <expression id="26475efa-1619-4227-a94c-094a8283e763">
+          <expression id="4d96ada2-e440-42ca-8038-998113d4039f">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="6ea8fbc6-72b0-4b6e-9a1f-461ed65d77bc">
+              <xpathFilter id="19ea7efa-7d30-4ca0-bad7-d0badcb05464">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runHandle/runID/text()</xpathQuery>
@@ -740,19 +740,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="4bcb450e-9ed8-46e6-90b1-830d9bb967f3">
+        <flowVariableAssignment id="87089c9e-a2e9-4138-8f39-e6f47f139dd4">
           <annotation></annotation>
           <name>cursorPosition</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>cursorPosition</contextKey>
-          <expression id="1c3dfe14-1d25-4b7e-88d6-24c6545dfd1c">
+          <expression id="af9f27d2-0ab4-4109-9d36-18dfc065b695">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="b8ca816b-fe84-49b7-893a-21ec7773f65f">
+              <xpathFilter id="1aa423dc-ccc4-485c-9104-4255fec46ecd">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runHandle/statusCursor/cursorPosition/text()</xpathQuery>
@@ -760,19 +760,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="88e685ac-cb58-4513-a058-b39bb35acebb">
+        <flowVariableAssignment id="87d37b45-0011-4023-a8e9-0bb34bd160f0">
           <annotation></annotation>
           <name>runReportUrl</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>runReportUrl</contextKey>
-          <expression id="9d40b88f-0030-4242-ba41-7163dd647289">
+          <expression id="7d45d03f-2093-422c-9e40-f6b60fb7132d">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="835e58e0-0509-4b92-b7d1-7734c69cf70c">
+              <xpathFilter id="04f99920-a692-4bf8-be28-02317e87254b">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runReportUrl/text()</xpathQuery>
@@ -780,19 +780,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="730cc5d3-3a3e-46c7-a671-184929049f74">
+        <flowVariableAssignment id="35de2958-17e0-42dc-8f08-ca582f60d68b">
           <annotation></annotation>
           <name>runResponse</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>runResponse</contextKey>
-          <expression id="8229bcde-2739-496f-8c04-b5e8d872ca22">
+          <expression id="ee820a37-dc68-4634-838b-64f9284aca8f">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="33be4076-be0d-4c37-bfa4-cc83d90a3c16">
+              <xpathFilter id="3a6e98fb-2027-4930-8f04-4173f1fd16e9">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runResponse/text()</xpathQuery>
@@ -800,19 +800,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="15e25a0e-673b-4061-8958-ae852baf54d4">
+        <flowVariableAssignment id="b4d5d696-7042-45d8-98b8-ba5535ce53fe">
           <annotation></annotation>
           <name>runResumeUrl</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>runResumeUrl</contextKey>
-          <expression id="db298792-ba31-4ddf-b928-c3c575a8bd9c">
+          <expression id="f47b13a3-aa29-4a13-8337-de4f661867e0">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="7afeefb5-9729-49c9-bd39-16cee61d1bc8">
+              <xpathFilter id="0cd15c1d-be73-4bc3-99c4-1d17207bc265">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/runResumeUrl/text()</xpathQuery>
@@ -820,19 +820,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="36a21a87-9fc8-4a98-9d8f-99fc4b117457">
+        <flowVariableAssignment id="210df9dc-8b9c-4623-9af4-7e79425221b7">
           <annotation></annotation>
           <name>status</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>status</contextKey>
-          <expression id="aafc4714-0ddf-4c5f-9c2e-e545632a7214">
+          <expression id="081e4a50-80db-4153-ba9d-2ea5e16e1d6f">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="d9734ffe-2d49-4380-8d6e-74b63f078732">
+              <xpathFilter id="3cd2abdf-8f87-4cf4-ab0b-c64c9c283072">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/status/text()</xpathQuery>
@@ -840,19 +840,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="a20f38c7-2a3c-4956-b2f9-e982abc4a9bc">
+        <flowVariableAssignment id="baf4b798-6e6c-4652-b661-2c87abaf32c6">
           <annotation></annotation>
           <name>primaryResultWanted</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>primaryResultWanted</contextKey>
-          <expression id="4c3e88d3-4543-4d43-9568-5bf19aa2ba60">
+          <expression id="0a090251-ceb9-4463-9e04-3bb4747edefb">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="52f3c9f9-adeb-443d-b16b-7d50cd059260">
+              <xpathFilter id="f6b21919-6e73-49e1-894c-7d543aaa1a41">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/statusOptions/primaryResultWanted/text()</xpathQuery>
@@ -860,19 +860,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="5431b446-297e-4062-abd5-d6a7cfbc27b7">
+        <flowVariableAssignment id="361816e4-e19f-4b72-9275-13f1035c756b">
           <annotation></annotation>
           <name>rawResultWanted</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>rawResultWanted</contextKey>
-          <expression id="c7d6555b-fe58-4b30-b069-b31391b0f48a">
+          <expression id="03fc29c0-bd6f-48ae-bad1-049b0a760d75">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="b6dd1ce2-75fa-427a-a663-ca7988767fd7">
+              <xpathFilter id="bbf78346-9214-48b2-af20-9d5aa9c58637">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/statusOptions/rawResultWanted/text()</xpathQuery>
@@ -880,19 +880,19 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
             </filters>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="45bd088c-943e-4bb6-8757-c1b62b74ff41">
+        <flowVariableAssignment id="7ffe4211-6813-4f37-8d13-b7f3bc34729e">
           <annotation></annotation>
           <name>steps</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>steps</contextKey>
-          <expression id="f03eb239-4a26-4fed-a9d4-0af68dd41e27">
+          <expression id="7346289e-01af-4faa-b633-f0cb02c532fb">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="abacb402-14ac-4ba9-8426-21b9f4efcf65">
+              <xpathFilter id="34d7a350-51e8-490a-8511-42d8405a8665">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getRunStatusExResponse/getRunStatusExReturn/steps/text()</xpathQuery>
@@ -903,53 +903,8 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
       </assignments>
       <throttleSize>0</throttleSize>
     </step>
-    <returnStep id="37ba1e79-6bbb-4bc7-81ad-eea1f6e5e11c">
-      <annotation>eba039c5-aabd-4a47-aaac-72264da29221.37ba1e79-6bbb-4bc7-81ad-eea1f6e5e11c.description</annotation>
-      <name>ERROR : failure</name>
-      <bounds>
-        <x>150.0</x>
-        <y>150.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>true</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>false</checkPointStep>
-      <historyCheckPointStep>false</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <resultContextKey>ERROR : failure</resultContextKey>
-      <userPrompt></userPrompt>
-      <bindings/>
-      <transitions>
-        <transition id="98d9ad1b-8caa-47fa-acd2-28c51a748d5c">
-          <annotation></annotation>
-          <name>failure</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>failure</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>37ba1e79-6bbb-4bc7-81ad-eea1f6e5e11c</refId>
-          </destination>
-          <source>
-            <refId>37ba1e79-6bbb-4bc7-81ad-eea1f6e5e11c</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>ERROR</returnStepType>
-      <assignments/>
-    </returnStep>
-    <returnStep id="39258444-f42b-4397-b987-d7b8f2ad8b2a">
-      <annotation>eba039c5-aabd-4a47-aaac-72264da29221.39258444-f42b-4397-b987-d7b8f2ad8b2a.description</annotation>
+    <returnStep id="e3f8b95d-a562-4e35-90d3-cd42921bc268">
+      <annotation>e9961b67-40d1-4aa0-9b32-d8de0af22c7b.e3f8b95d-a562-4e35-90d3-cd42921bc268.description</annotation>
       <name>RESOLVED : success</name>
       <bounds>
         <x>0.0</x>
@@ -957,6 +912,12 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
+      <iconSpec id="772d9def-4ee4-4f75-a1ee-b967eaea30fe">
+        <baseIcon>return_success.png</baseIcon>
+        <basePath>System</basePath>
+        <readOnly>true</readOnly>
+        <layers/>
+      </iconSpec>
       <addResultToRunContext>false</addResultToRunContext>
       <isCriticalStep>false</isCriticalStep>
       <isNonBlocking>false</isNonBlocking>
@@ -972,7 +933,7 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
       <userPrompt></userPrompt>
       <bindings/>
       <transitions>
-        <transition id="ee4664ee-e7ed-4b54-bfa6-4d1e7cab010b">
+        <transition id="97c6aa61-44d6-4d71-a54f-a701ea6d0c6f">
           <annotation></annotation>
           <name>success</name>
           <command>NEXT</command>
@@ -981,10 +942,10 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>39258444-f42b-4397-b987-d7b8f2ad8b2a</refId>
+            <refId>e3f8b95d-a562-4e35-90d3-cd42921bc268</refId>
           </destination>
           <source>
-            <refId>39258444-f42b-4397-b987-d7b8f2ad8b2a</refId>
+            <refId>e3f8b95d-a562-4e35-90d3-cd42921bc268</refId>
           </source>
           <positions/>
         </transition>
@@ -993,6 +954,57 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
       <returnStepType>RESOLVED</returnStepType>
       <assignments/>
     </returnStep>
+    <returnStep id="0ed26229-2384-46f1-a462-05b9db5c01a1">
+      <annotation>e9961b67-40d1-4aa0-9b32-d8de0af22c7b.0ed26229-2384-46f1-a462-05b9db5c01a1.description</annotation>
+      <name>ERROR : failure</name>
+      <bounds>
+        <x>150.0</x>
+        <y>150.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <iconSpec id="6e9a73fe-366a-4c79-8115-c722fdf67917">
+        <baseIcon>return_failure.png</baseIcon>
+        <basePath>System</basePath>
+        <readOnly>true</readOnly>
+        <layers/>
+      </iconSpec>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>true</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>false</checkPointStep>
+      <historyCheckPointStep>false</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <resultContextKey>ERROR : failure</resultContextKey>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="a1ac6034-194b-4ff7-a8ec-e1a66d9b24b9">
+          <annotation></annotation>
+          <name>failure</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>failure</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>0ed26229-2384-46f1-a462-05b9db5c01a1</refId>
+          </destination>
+          <source>
+            <refId>0ed26229-2384-46f1-a462-05b9db5c01a1</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>ERROR</returnStepType>
+      <assignments/>
+    </returnStep>
   </steps>
-  <startSteps>93141a82-670a-4ce2-aad2-bcf25dab8ffa</startSteps>
+  <startSteps>18d08af2-31bd-4a23-950d-324cec8f886e</startSteps>
 </flow>

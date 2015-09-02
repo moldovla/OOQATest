@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flow id="9035c2fa-a8c6-4706-a34d-8ccb07a104ad">
-  <descriptionCdata><![CDATA[9035c2fa-a8c6-4706-a34d-8ccb07a104ad.083f1c14-7d75-45b0-b6f6-434c344a72b6.description=<pre>Invokes web service methods.  This operation should not be used directly\!  Please use the wizard to build flows that use this operation.\n\nInputs\:\nxmlTemplate - The template of the soap request to make.\ninputMap - A map used to map between template names and user-friendly names. The tamplate names are pipe-delimited xpaths of the xmltemplate location, with a numerical element for lists.\nurl - The url to post to. \nheader_SOAPAction - The SOAPAction http header field, defined by many web services for indicating the intent of the request\nwswAuthenticationType - The authentication type to use for the username and password input. http is default (Uses http authentication), other options are 'ntlm', 'ws-security digest' and 'ws-security text' WARNING\: ws-security text transmits passwords in clear-text\nWSSecuritySignRequest - true or false, should the SOAP request be signed using WS-Security.\nWSSecurityEncryptRequest - true or false, should the entire SOAP request be signed using WS-Security\nWSSecurityTimestampRequest - true or false, should the Timestamp attribute be added to the WS-Security header\nWSSecurityKeystore - keystore to use for encrypting and signing requests.\nWSSecurityKeystoreType - The type of WSSecurityKeystore.\nWSSecurityKeystorePassword - The password for WSSecurityKeystore.\ncontentType - Value to be used in the Content-Type http header\ncharacterSet - The characterSet for HTTP Get request and response. Default is UTF-8.\nusername - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\npassword - The password to use for authenticating with the web service\ntrustAllRoots - Enables weak security over SSL. A SSH certificate is trusted even if no trusted CA issued it. valid options are\: true/false.\nuseCookies - Enables cookie tracking. Cookies will be stored between consecutive calls. valid options are\: true/false.\nusesJSON - Use JSON arrays for the SOAP Request for all Array types. valid options are\: true/false.\ntimeout - a timeout after which the connection should be terminated, or 0 for no timeout.\nproxy - A proxy to use when accessing the web service.\nproxyPort - A port on the proxy to connect to.\nproxyUsername - A username to use when connecting to the proxy.\nproxyPassword - A password to use when connecting to the proxy.\nkeystore - the path to the keystore to use for SSL Client Certificates when using http authentication\nkeystorePassword - the password for the keystore when using http authentication\nICONCLUDE_WSW_VERSION - This value is used internally by the operation\nreturnXMLRequest - If this input is set to true, a new output named rawXMLRequest is returned from the operation which contains the text of the SOAP request that will be sent. This can be very valuable in troubleshooting.\n\nAny additional inputs that follow these are added by the Web Service Wizard, and they are specific to the particular web service method being called.\n\nResponses\:\nsuccess - SOAP request completed successfully.\nfailure - something went wrong.\n\nReturns\:\ndocument - raw XML response\ndocumentStripped - raw XML response stripped of namespaces for ease in parsing with XML XPath operations\njsonStripped - raw XML response stripped of namespaces for ease in parsing with JSON operations, input usesJSON must be set to true for this to be populated.\n\nNotes\:\nIf you add new step-level inputs with the name header_<headername>, where <headername> is the name of an html header, then that html header will be set to the given value in the HTTP request.\n\n</pre>
-9035c2fa-a8c6-4706-a34d-8ccb07a104ad.0b94ab22-a464-4198-b5a2-5930c6834eea.description=<pre>\n\n</pre>
-9035c2fa-a8c6-4706-a34d-8ccb07a104ad.10f2f886-9428-418b-9c1d-ca9df1223c54.description=<pre>\n\n</pre>
-9035c2fa-a8c6-4706-a34d-8ccb07a104ad.29bfb1bb-389d-4cd6-9b8c-0214cff9838b.description=<pre>\nCompares two strings, returning a true response if and only if they contain the same sequence of characters. A null string is considered to be equal to an empty string.\n\nInputs\:\nstring1 - The first string.\nstring2 - The second string.\nignoreCase - If set to 'true', then the comparison ignores case considerations. The two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case. If set to any value other than 'true', then the strings must match exactly to be considered equal.\n\nresponses\:\ntrue - If the two strings are equal\nfalse - If the two strings are not equal\n\n</pre>
-9035c2fa-a8c6-4706-a34d-8ccb07a104ad.description=<pre>\nThis subflow was created by the Web Services Wizard to invoke the getCategories operation on https\://myd-vm01750.hpswlabs.adapps.hp.com\:8443/PAS/services/WSCentralService?wsdl. Note that the inputs to this flow which correspond to web service inputs are optional inputs.  This is due to the fact that web services definitions usually incorrectly indicate that too many inputs are required, and mirroring those settings in the flow would force you to enter unused values when running the flow.  The xmlTemplate input on the Invoke Method 2 step of this flow contains a template of the xml message to be sent, and the fields preceded by the comment "<\!--Optional\:-->" or "<\!--zero or more repetitions-->" are those which the web service indicates are optional; all others are indicated to be required.\n\nInputs\:\n    webserviceHost - The host that is running the web service\n    webservicePort - The port on the host running the web service\n    username - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\n    password - The password to use for authenticating with the web service.\n    getCategories - The input named getCategories at the top level of the request.\n\nResults\:\n    document - The raw XML response of the web service\n    documentStripped - The XML response of the web service stripped of namespaces\n    getCategoriesReturn - The output given by the XPath\: /Envelope/Body/getCategoriesResponse/getCategoriesReturn/text()\n\nResponses\:\n    success - The SOAP command was accepted by the web service\n    failure - Something went wrong while making the SOAP request\n</pre>
+<flow id="02296996-8d89-4481-9034-75667ddbe366">
+  <descriptionCdata><![CDATA[02296996-8d89-4481-9034-75667ddbe366.0383c3a6-a506-40f2-986d-dfa00160d000.description=<pre>\n\n</pre>
+02296996-8d89-4481-9034-75667ddbe366.223ed8ed-de1f-4bdf-9c48-650fc99a2f9c.description=<pre>\n\n</pre>
+02296996-8d89-4481-9034-75667ddbe366.291c8561-9ee8-4bfa-a10b-bc4643255af9.description=<pre>\nCompares two strings, returning a true response if and only if they contain the same sequence of characters. A null string is considered to be equal to an empty string.\n\nInputs\:\nstring1 - The first string.\nstring2 - The second string.\nignoreCase - If set to 'true', then the comparison ignores case considerations. The two strings are considered equal ignoring case if they are of the same length and corresponding characters in the two strings are equal ignoring case. If set to any value other than 'true', then the strings must match exactly to be considered equal.\n\nresponses\:\ntrue - If the two strings are equal\nfalse - If the two strings are not equal\n\n</pre>
+02296996-8d89-4481-9034-75667ddbe366.6292436d-1b97-4021-abb7-41f0317e6394.description=<pre>Invokes web service methods.  This operation should not be used directly\!  Please use the wizard to build flows that use this operation.\n\nInputs\:\nxmlTemplate - The template of the soap request to make.\ninputMap - A map used to map between template names and user-friendly names. The tamplate names are pipe-delimited xpaths of the xmltemplate location, with a numerical element for lists.\nurl - The url to post to. \nheader_SOAPAction - The SOAPAction http header field, defined by many web services for indicating the intent of the request\nwswAuthenticationType - The authentication type to use for the username and password input. http is default (Uses http authentication), other options are 'ntlm', 'ws-security digest' and 'ws-security text' WARNING\: ws-security text transmits passwords in clear-text\nWSSecuritySignRequest - true or false, should the SOAP request be signed using WS-Security.\nWSSecurityEncryptRequest - true or false, should the entire SOAP request be signed using WS-Security\nWSSecurityTimestampRequest - true or false, should the Timestamp attribute be added to the WS-Security header\nWSSecurityKeystore - keystore to use for encrypting and signing requests.\nWSSecurityKeystoreType - The type of WSSecurityKeystore.\nWSSecurityKeystorePassword - The password for WSSecurityKeystore.\ncontentType - Value to be used in the Content-Type http header\ncharacterSet - The characterSet for HTTP Get request and response. Default is UTF-8.\nusername - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\npassword - The password to use for authenticating with the web service\ntrustAllRoots - Enables weak security over SSL. A SSH certificate is trusted even if no trusted CA issued it. valid options are\: true/false.\nuseCookies - Enables cookie tracking. Cookies will be stored between consecutive calls. valid options are\: true/false.\nusesJSON - Use JSON arrays for the SOAP Request for all Array types. valid options are\: true/false.\ntimeout - a timeout after which the connection should be terminated, or 0 for no timeout.\nproxy - A proxy to use when accessing the web service.\nproxyPort - A port on the proxy to connect to.\nproxyUsername - A username to use when connecting to the proxy.\nproxyPassword - A password to use when connecting to the proxy.\nkeystore - the path to the keystore to use for SSL Client Certificates when using http authentication\nkeystorePassword - the password for the keystore when using http authentication\nICONCLUDE_WSW_VERSION - This value is used internally by the operation\nreturnXMLRequest - If this input is set to true, a new output named rawXMLRequest is returned from the operation which contains the text of the SOAP request that will be sent. This can be very valuable in troubleshooting.\n\nAny additional inputs that follow these are added by the Web Service Wizard, and they are specific to the particular web service method being called.\n\nResponses\:\nsuccess - SOAP request completed successfully.\nfailure - something went wrong.\n\nReturns\:\ndocument - raw XML response\ndocumentStripped - raw XML response stripped of namespaces for ease in parsing with XML XPath operations\njsonStripped - raw XML response stripped of namespaces for ease in parsing with JSON operations, input usesJSON must be set to true for this to be populated.\n\nNotes\:\nIf you add new step-level inputs with the name header_<headername>, where <headername> is the name of an html header, then that html header will be set to the given value in the HTTP request.\n\n</pre>
+02296996-8d89-4481-9034-75667ddbe366.description=<pre>\nThis subflow was created by the Web Services Wizard to invoke the getCategories operation on https\://myd-vm01750.hpswlabs.adapps.hp.com\:8443/PAS/services/WSCentralService?wsdl. Note that the inputs to this flow which correspond to web service inputs are optional inputs.  This is due to the fact that web services definitions usually incorrectly indicate that too many inputs are required, and mirroring those settings in the flow would force you to enter unused values when running the flow.  The xmlTemplate input on the Invoke Method 2 step of this flow contains a template of the xml message to be sent, and the fields preceded by the comment "<\!--Optional\:-->" or "<\!--zero or more repetitions-->" are those which the web service indicates are optional; all others are indicated to be required.\n\nInputs\:\n    webserviceHost - The host that is running the web service\n    webservicePort - The port on the host running the web service\n    username - The username to use for authenticating with the web service. For NTLM authentication, the required format is domain\\user.\n    password - The password to use for authenticating with the web service.\n    getCategories - The input named getCategories at the top level of the request.\n\nResults\:\n    document - The raw XML response of the web service\n    documentStripped - The XML response of the web service stripped of namespaces\n    getCategoriesReturn - The output given by the XPath\: /Envelope/Body/getCategoriesResponse/getCategoriesReturn/text()\n\nResponses\:\n    success - The SOAP command was accepted by the web service\n    failure - Something went wrong while making the SOAP request\n</pre>
 ]]></descriptionCdata>
-  <annotation>9035c2fa-a8c6-4706-a34d-8ccb07a104ad.description</annotation>
+  <annotation>02296996-8d89-4481-9034-75667ddbe366.description</annotation>
   <name>getCategories</name>
   <categories/>
   <inputs>
-    <staticBinding id="c2faf0fb-483d-44d5-8b21-b0be415ced98">
+    <staticBinding id="59a1c217-8683-409b-b5f5-9d5c89aa0aa0">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -23,7 +23,7 @@
       <value>${OO2OO-API_Check/centralHost}</value>
       <record>false</record>
     </staticBinding>
-    <staticBinding id="3c4c323e-bb6a-4349-bf3a-3dc83dbe327d">
+    <staticBinding id="5cbe2634-debb-4693-9fc3-05044f4119a8">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -36,7 +36,7 @@
       <value>${OO2OO-API_Check/centralPort}</value>
       <record>false</record>
     </staticBinding>
-    <identityBinding id="43c7ed59-9123-44da-9da5-fd61b2c7087e">
+    <identityBinding id="cc55caab-6250-4fa7-b4eb-249836440335">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -53,7 +53,7 @@
       </link>
       <identityAttribute>USERNAME</identityAttribute>
     </identityBinding>
-    <identityBinding id="2c94ce83-0ac9-4f9d-9f10-ce0df082ef51">
+    <identityBinding id="ec270880-4130-48be-8353-872b7974e9f1">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -70,7 +70,7 @@
       </link>
       <identityAttribute>PASSWORD</identityAttribute>
     </identityBinding>
-    <staticBinding id="4202d88d-f654-4195-8ca9-3d543c501557">
+    <staticBinding id="139db4bb-37f4-46d5-b6cf-d666c039f4db">
       <annotation></annotation>
       <assignFromContext>true</assignFromContext>
       <assignToContext>true</assignToContext>
@@ -84,13 +84,8 @@
       <record>false</record>
     </staticBinding>
   </inputs>
-  <scriptlet id="084679fa-cf21-42f3-a0ae-27df2c11b250">
-    <annotation></annotation>
-    <name>Operation getCategories (9035c2fa-a8c6-4706-a34d-8ccb07a104ad)</name>
-    <type>RHINO</type>
-  </scriptlet>
   <possibleResponses>
-    <opResponse id="6dda525a-a8db-49a4-91a1-9c0348a9dd91">
+    <opResponse id="da200603-1c87-47ef-8c83-229badc3027d">
       <annotation></annotation>
       <name>success</name>
       <isDefault>false</isDefault>
@@ -98,7 +93,7 @@
       <type>RESOLVED</type>
       <matchRules/>
     </opResponse>
-    <opResponse id="5c7483ac-8e8d-40a2-a934-d5894b728bce">
+    <opResponse id="49971577-5340-4f0a-b985-868895fe7057">
       <annotation></annotation>
       <name>failure</name>
       <isDefault>false</isDefault>
@@ -108,14 +103,14 @@
     </opResponse>
   </possibleResponses>
   <availableResultExpressions/>
-  <resultExpression id="aa5eaa7e-7d79-4acb-ba94-7839e1777fbb">
+  <resultExpression id="b6449ddb-b253-48cf-b3c9-4d306b91bb94">
     <annotation></annotation>
     <name>document</name>
     <fieldName>document</fieldName>
     <sourceType>RAWRESULT</sourceType>
     <filters/>
   </resultExpression>
-  <iconSpec id="a4b31cb1-1e64-4e1f-8184-99204d72df72">
+  <iconSpec id="b7dbb82e-9b7b-4a45-9437-750374ddc6a6">
     <baseIcon>flow.png</baseIcon>
     <basePath>System</basePath>
     <readOnly>false</readOnly>
@@ -126,8 +121,8 @@
   <compatibleRuntimeContext>false</compatibleRuntimeContext>
   <historyCheckPointFlow>false</historyCheckPointFlow>
   <steps>
-    <step id="083f1c14-7d75-45b0-b6f6-434c344a72b6">
-      <annotation>9035c2fa-a8c6-4706-a34d-8ccb07a104ad.083f1c14-7d75-45b0-b6f6-434c344a72b6.description</annotation>
+    <step id="6292436d-1b97-4021-abb7-41f0317e6394">
+      <annotation>02296996-8d89-4481-9034-75667ddbe366.6292436d-1b97-4021-abb7-41f0317e6394.description</annotation>
       <name>Invoke Method 2</name>
       <bounds>
         <x>0.0</x>
@@ -135,12 +130,12 @@
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
-      <iconSpec id="eac3d7de-9a80-4f84-999e-6c865e1d619f">
+      <iconSpec id="fa835753-9189-457a-9096-952c65b8c5b8">
         <baseIcon>generic_server_plain.png</baseIcon>
         <basePath>Servers/</basePath>
         <readOnly>false</readOnly>
         <layers>
-          <iconSpec id="cb587a98-818b-46c4-a403-0dc087eac544">
+          <iconSpec id="f950b817-f511-4c72-8045-4ccfc7046058">
             <baseIcon>remote.png</baseIcon>
             <basePath>Annotations/</basePath>
             <readOnly>false</readOnly>
@@ -162,7 +157,7 @@
       <resultContextKey>Invoke Method 2</resultContextKey>
       <userPrompt></userPrompt>
       <bindings>
-        <staticBinding id="9fadb153-74a7-4f95-b930-0ef5fa8375bf">
+        <staticBinding id="03a5b1a8-9ef3-4475-bfe8-3e100fd328eb">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -174,7 +169,7 @@
           <value>${OO2OO-API_Check/centralProtocol}://${webserviceHost}:${webservicePort}/PAS/services/WSCentralService</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="9cc77056-93c7-41cb-abe7-d60f08b45bf3">
+        <staticBinding id="b2cd739d-5c44-46f9-af8d-19e4c24a12e1">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -187,7 +182,7 @@
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="48607c74-da94-4d2d-8eee-ac5ee131625e">
+        <staticBinding id="77bff444-d57e-4270-9cd0-199095bea132">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -204,7 +199,7 @@
 &lt;/soapenv:Envelope&gt;</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="cee7be21-61d2-4a6e-bf98-933c92f4e8a2">
+        <staticBinding id="e33f87ef-df85-47bf-ad75-f8d272767c2e">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -216,7 +211,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="126c34f0-4c34-42d6-a700-b1100afd0349">
+        <staticBinding id="ac1b8ba4-8d31-4fb4-b607-22887b5d516f">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -228,7 +223,7 @@
           <value>getCategories=getCategories</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="728aa727-a1d4-4992-ab1e-516b950e80a3">
+        <staticBinding id="774d8018-68e3-47a3-922c-9a0c5c37bab5">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -240,7 +235,7 @@
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="0f502200-d811-41f0-8b9f-e482e0b968c5">
+        <staticBinding id="6c697bd5-ab3c-4ddf-ab65-86c8fa030df9">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -252,7 +247,7 @@
           <value>${username}</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="17d7ae2b-07de-46c2-b6bb-8c8ce7c15ca3">
+        <staticBinding id="4f0aade1-6316-4b8f-a5e4-a9d381c98ab8">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -264,7 +259,7 @@
           <value>${password}</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="7c484b9d-0e30-4a31-a489-8263456d5cba">
+        <staticBinding id="c28707c4-3a65-45d5-a2cf-aefb93095b88">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -276,7 +271,7 @@
           <value>http</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="51e9a19f-4d14-447a-bb80-3d8fe0ea3b75">
+        <staticBinding id="bd5bf592-8e16-4524-90a0-d9052d360b20">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -288,7 +283,7 @@
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="b37d64ac-b0ba-4e32-bd2f-aeb9783b1533">
+        <staticBinding id="2475876f-fa5e-4031-aa77-01f589ef5dad">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -300,7 +295,7 @@
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="c0681c59-3fd7-4382-8180-a0f01b50b0e8">
+        <staticBinding id="b9224e54-9389-4bd6-b360-cdc3505262d7">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -312,7 +307,7 @@
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="ba827695-44a3-4ed0-bfd7-41988d63f2ff">
+        <staticBinding id="976e9ba6-b9f1-449e-9aed-546fe444a8ea">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -324,7 +319,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="c3386708-94ea-4c3e-b1d3-2d3a8c1b66ef">
+        <staticBinding id="c8f53b0a-3562-43a0-80da-8e5d615470ab">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -336,7 +331,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="950019a8-00d4-4cb0-a7d8-e31ed3565088">
+        <staticBinding id="c1a10e16-5cab-4baa-ab7e-13515a498779">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>ENCRYPTED</inputType>
@@ -348,7 +343,7 @@
           <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="889ae950-6d71-4fc8-81b4-a0eaa52b6a88">
+        <staticBinding id="bd535139-9295-4c86-acdd-e7e22a5bb1a3">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -360,7 +355,7 @@
           <value>text/xml</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="99535939-4d17-4f38-a8c2-dda7630d3ea1">
+        <staticBinding id="af49d6eb-295a-4553-ac35-5302f3ae910a">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -372,7 +367,7 @@
           <value>UTF-8</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="f694ca9c-e3f0-4569-ab78-b667e4543379">
+        <staticBinding id="756913e9-a7c6-4fdf-94ee-809d630ab59e">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -384,7 +379,7 @@
           <value>true</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="35309aa4-43a9-416a-ab1b-00d6906db379">
+        <staticBinding id="5c1f8270-6323-4cf6-af95-daf5f5c00466">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -396,7 +391,7 @@
           <value>true</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="c5d28a34-3ef9-4290-bd77-a96945983246">
+        <staticBinding id="19ec18e4-b075-4da1-99de-88ca5ba26af8">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -408,7 +403,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="e4b994a7-e8ef-4ef6-b85a-49176655a35d">
+        <staticBinding id="b80a2ebf-9fb2-45f9-beb8-20f6042bb6b0">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -420,7 +415,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="06523acd-00d5-4171-95b2-3ec99589e320">
+        <staticBinding id="31d2c9ab-c00d-4d73-80ee-b721a38e683d">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -432,7 +427,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="b4945909-008c-4f88-bd6e-0ee257fbf5cb">
+        <staticBinding id="b28f744d-4644-44be-8dac-eedbfc686bf0">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -444,7 +439,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="59c3f41c-34b8-4d89-9b10-485037aad367">
+        <staticBinding id="ca98b5f5-bc99-4137-9914-207b38bf6321">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>ENCRYPTED</inputType>
@@ -456,7 +451,7 @@
           <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="688784b5-9825-438d-a280-5d3788f96893">
+        <staticBinding id="b2090f2b-fbc1-4bd8-bbf7-374f723d5f3a">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -468,7 +463,7 @@
           <value></value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="37d9daad-28fd-47b7-b55e-703a7928ed4a">
+        <staticBinding id="83022509-9be2-4260-a57e-c2c8fa5ecc4e">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>ENCRYPTED</inputType>
@@ -480,7 +475,7 @@
           <value>{OBFUSCATED}tFQ2pnWYKQCGLnn/5LPzoA==</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="68df4e7f-77cc-4736-8eb3-c645db6c8c67">
+        <staticBinding id="e9d26a92-0e20-45b4-91d6-19e903fb6502">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -492,7 +487,7 @@
           <value>2</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="352e04be-55c9-4c5c-8f08-9e3d8c4c4108">
+        <staticBinding id="99be46b0-3203-4fc4-94ea-4ec0ac514be6">
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -504,7 +499,7 @@
           <value>false</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="4aa91abc-b36c-4e49-9ed5-48989dfb0826">
+        <staticBinding id="fd835eca-4e49-4e22-9de3-a137fb37358c">
           <fromContextKey>getCategories</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -519,7 +514,7 @@
         </staticBinding>
       </bindings>
       <transitions>
-        <transition id="a7c01056-e585-4bfe-a3ef-f678990fd370">
+        <transition id="7c50ba12-b3e7-49ba-a075-4a8b351db8a8">
           <annotation></annotation>
           <name>failure</name>
           <command>NEXT</command>
@@ -528,10 +523,10 @@
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>10f2f886-9428-418b-9c1d-ca9df1223c54</refId>
+            <refId>0383c3a6-a506-40f2-986d-dfa00160d000</refId>
           </destination>
           <source>
-            <refId>083f1c14-7d75-45b0-b6f6-434c344a72b6</refId>
+            <refId>6292436d-1b97-4021-abb7-41f0317e6394</refId>
           </source>
           <positions/>
           <labelPosition>
@@ -539,7 +534,7 @@
             <y>0.0</y>
           </labelPosition>
         </transition>
-        <transition id="b41eb6ca-5d1f-4b66-88cd-b350f4a8b298">
+        <transition id="43818f16-f1b5-40e8-81d1-96b7b38a18a7">
           <annotation></annotation>
           <name>success</name>
           <command>NEXT</command>
@@ -548,10 +543,10 @@
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>29bfb1bb-389d-4cd6-9b8c-0214cff9838b</refId>
+            <refId>291c8561-9ee8-4bfa-a10b-bc4643255af9</refId>
           </destination>
           <source>
-            <refId>083f1c14-7d75-45b0-b6f6-434c344a72b6</refId>
+            <refId>6292436d-1b97-4021-abb7-41f0317e6394</refId>
           </source>
           <positions>
             <point>
@@ -574,13 +569,13 @@
         <refId>962ffbf8-4105-46bb-8c71-84f037c4de61</refId>
       </opRef>
       <assignments>
-        <flowVariableAssignment id="c3e2e727-69cc-4f8c-bc40-1505f0fdc3c3">
+        <flowVariableAssignment id="e8d38473-7901-4dcb-ac97-a7e59d6cdc22">
           <annotation></annotation>
           <name>assignment</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
           <contextKey>requestStatus</contextKey>
-          <expression id="85abdab1-af7c-43ce-9617-3fcc9a109a52">
+          <expression id="92af9184-ff62-49c4-a0ee-68c1c746781d">
             <annotation></annotation>
             <name>Result Field: status</name>
             <fieldName>status</fieldName>
@@ -588,13 +583,13 @@
             <filters/>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="bcf22836-cb77-4ca3-aafe-28c39f64ba4f">
+        <flowVariableAssignment id="819baf76-ae36-4299-abb6-f65b1c8fa782">
           <annotation></annotation>
           <name>document</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>document</contextKey>
-          <expression id="e29fc912-f3bb-4fc4-bdbc-e0d357e8051e">
+          <expression id="1903ca92-8b45-4c83-9733-3f160848a9c7">
             <annotation></annotation>
             <name>document</name>
             <fieldName>document</fieldName>
@@ -602,13 +597,13 @@
             <filters/>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="4068d67f-98da-4afe-97e4-e70f2ffa8626">
+        <flowVariableAssignment id="183bd2ad-7e31-4d16-ba62-15f57b269e94">
           <annotation></annotation>
           <name>documentStripped</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>documentStripped</contextKey>
-          <expression id="a6524588-f9e5-4520-beef-768bc543883a">
+          <expression id="a434f507-9804-433e-a71c-30abb9837e81">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
@@ -616,19 +611,19 @@
             <filters/>
           </expression>
         </flowVariableAssignment>
-        <flowVariableAssignment id="09dca38b-e4bc-46b5-adeb-f893149f0c8c">
+        <flowVariableAssignment id="774fdfea-6c0a-419d-9304-697dba3a1afe">
           <annotation></annotation>
           <name>getCategoriesReturn</name>
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_OUTPUT_FIELD</assignmentTargetType>
           <contextKey>getCategoriesReturn</contextKey>
-          <expression id="8c8718ce-b749-496e-a901-5b88e0681dfe">
+          <expression id="3f2dde78-4528-475d-ae92-8ad3b0c74a72">
             <annotation></annotation>
             <name>documentStripped</name>
             <fieldName>documentStripped</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters>
-              <xpathFilter id="30d9f36e-a006-49d4-a830-de1a18b7309f">
+              <xpathFilter id="d0a0d2ee-5d2c-4596-b4e0-71234e413cf0">
                 <annotation></annotation>
                 <name></name>
                 <xpathQuery>/Envelope/Body/getCategoriesResponse/getCategoriesReturn/text()</xpathQuery>
@@ -639,59 +634,8 @@
       </assignments>
       <throttleSize>0</throttleSize>
     </step>
-    <returnStep id="10f2f886-9428-418b-9c1d-ca9df1223c54">
-      <annotation>9035c2fa-a8c6-4706-a34d-8ccb07a104ad.10f2f886-9428-418b-9c1d-ca9df1223c54.description</annotation>
-      <name>ERROR : failure</name>
-      <bounds>
-        <x>0.0</x>
-        <y>220.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <iconSpec id="0a84572d-c500-4025-8aeb-6964932953be">
-        <baseIcon>return_failure.png</baseIcon>
-        <basePath>System</basePath>
-        <readOnly>true</readOnly>
-        <layers/>
-      </iconSpec>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>true</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>false</checkPointStep>
-      <historyCheckPointStep>false</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <resultContextKey>ERROR : failure</resultContextKey>
-      <userPrompt></userPrompt>
-      <bindings/>
-      <transitions>
-        <transition id="6ad42e78-e181-425f-9068-a61640eec16e">
-          <annotation></annotation>
-          <name>failure</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>failure</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>10f2f886-9428-418b-9c1d-ca9df1223c54</refId>
-          </destination>
-          <source>
-            <refId>10f2f886-9428-418b-9c1d-ca9df1223c54</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>ERROR</returnStepType>
-      <assignments/>
-    </returnStep>
-    <step id="29bfb1bb-389d-4cd6-9b8c-0214cff9838b">
-      <annotation>9035c2fa-a8c6-4706-a34d-8ccb07a104ad.29bfb1bb-389d-4cd6-9b8c-0214cff9838b.description</annotation>
+    <step id="291c8561-9ee8-4bfa-a10b-bc4643255af9">
+      <annotation>02296996-8d89-4481-9034-75667ddbe366.291c8561-9ee8-4bfa-a10b-bc4643255af9.description</annotation>
       <name>String Equals</name>
       <bounds>
         <x>180.0</x>
@@ -699,7 +643,7 @@
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
-      <iconSpec id="b171d863-ad87-4f75-9cf8-80cbc14db930">
+      <iconSpec id="8b1f21cd-60af-4b6d-aac5-da71db85e388">
         <baseIcon>compare.png</baseIcon>
         <basePath>Utilities/</basePath>
         <readOnly>false</readOnly>
@@ -718,7 +662,7 @@
       <scriptResultStep>false</scriptResultStep>
       <userPrompt></userPrompt>
       <bindings>
-        <staticBinding id="edfbc7aa-a061-4d77-b4a7-b72a7903ff1f">
+        <staticBinding id="ee461e91-47b0-49fc-87ae-a84e51cdae52">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -731,7 +675,7 @@
           <value>${requestStatus}</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="1959399a-c13b-45ef-bcfb-d833ad4b5085">
+        <staticBinding id="3f8c0263-668a-40d9-ab8f-aa560e1f584d">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -744,7 +688,7 @@
           <value>200</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="f242008d-b534-4c6b-96e7-275e72d9741f">
+        <staticBinding id="93ff9106-b063-41e5-b7c8-2af744bb4204">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -759,7 +703,7 @@
         </staticBinding>
       </bindings>
       <transitions>
-        <transition id="f118b79d-15b8-444b-94d5-ebf2340e537c">
+        <transition id="7bb6262c-0fee-4bbd-98ed-bf9878c1521b">
           <annotation></annotation>
           <name>false</name>
           <command>NEXT</command>
@@ -768,10 +712,10 @@
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>10f2f886-9428-418b-9c1d-ca9df1223c54</refId>
+            <refId>0383c3a6-a506-40f2-986d-dfa00160d000</refId>
           </destination>
           <source>
-            <refId>29bfb1bb-389d-4cd6-9b8c-0214cff9838b</refId>
+            <refId>291c8561-9ee8-4bfa-a10b-bc4643255af9</refId>
           </source>
           <positions>
             <point>
@@ -788,7 +732,7 @@
             <y>0.0</y>
           </labelPosition>
         </transition>
-        <transition id="b3efe239-fae3-4db3-b88f-f9230b012425">
+        <transition id="5fa4427a-63b8-40c9-bc7c-93aead054237">
           <annotation></annotation>
           <name>true</name>
           <command>NEXT</command>
@@ -797,10 +741,10 @@
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>0b94ab22-a464-4198-b5a2-5930c6834eea</refId>
+            <refId>223ed8ed-de1f-4bdf-9c48-650fc99a2f9c</refId>
           </destination>
           <source>
-            <refId>29bfb1bb-389d-4cd6-9b8c-0214cff9838b</refId>
+            <refId>291c8561-9ee8-4bfa-a10b-bc4643255af9</refId>
           </source>
           <positions>
             <point>
@@ -825,8 +769,53 @@
       <assignments/>
       <throttleSize>0</throttleSize>
     </step>
-    <returnStep id="0b94ab22-a464-4198-b5a2-5930c6834eea">
-      <annotation>9035c2fa-a8c6-4706-a34d-8ccb07a104ad.0b94ab22-a464-4198-b5a2-5930c6834eea.description</annotation>
+    <returnStep id="0383c3a6-a506-40f2-986d-dfa00160d000">
+      <annotation>02296996-8d89-4481-9034-75667ddbe366.0383c3a6-a506-40f2-986d-dfa00160d000.description</annotation>
+      <name>ERROR : failure</name>
+      <bounds>
+        <x>0.0</x>
+        <y>220.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>true</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>false</checkPointStep>
+      <historyCheckPointStep>false</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <resultContextKey>ERROR : failure</resultContextKey>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="b02cfef2-d328-4f95-b962-d0573ef5da02">
+          <annotation></annotation>
+          <name>failure</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>failure</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>0383c3a6-a506-40f2-986d-dfa00160d000</refId>
+          </destination>
+          <source>
+            <refId>0383c3a6-a506-40f2-986d-dfa00160d000</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>ERROR</returnStepType>
+      <assignments/>
+    </returnStep>
+    <returnStep id="223ed8ed-de1f-4bdf-9c48-650fc99a2f9c">
+      <annotation>02296996-8d89-4481-9034-75667ddbe366.223ed8ed-de1f-4bdf-9c48-650fc99a2f9c.description</annotation>
       <name>RESOLVED : success</name>
       <bounds>
         <x>406.0</x>
@@ -834,7 +823,7 @@
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
-      <iconSpec id="c65a96be-ef6a-45b5-ba5a-d8399b86663d">
+      <iconSpec id="6ac99cbb-c845-4b31-829b-d5714e0330a5">
         <baseIcon>return_success.png</baseIcon>
         <basePath>System</basePath>
         <readOnly>true</readOnly>
@@ -855,7 +844,7 @@
       <userPrompt></userPrompt>
       <bindings/>
       <transitions>
-        <transition id="6fcd5b92-e469-4fb4-9d9d-e8a1fa7db9c7">
+        <transition id="657b98b6-f5f2-4653-aa51-b47f887e29b4">
           <annotation></annotation>
           <name>success</name>
           <command>NEXT</command>
@@ -864,10 +853,10 @@
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>0b94ab22-a464-4198-b5a2-5930c6834eea</refId>
+            <refId>223ed8ed-de1f-4bdf-9c48-650fc99a2f9c</refId>
           </destination>
           <source>
-            <refId>0b94ab22-a464-4198-b5a2-5930c6834eea</refId>
+            <refId>223ed8ed-de1f-4bdf-9c48-650fc99a2f9c</refId>
           </source>
           <positions/>
         </transition>
@@ -877,5 +866,5 @@
       <assignments/>
     </returnStep>
   </steps>
-  <startSteps>083f1c14-7d75-45b0-b6f6-434c344a72b6</startSteps>
+  <startSteps>6292436d-1b97-4021-abb7-41f0317e6394</startSteps>
 </flow>
