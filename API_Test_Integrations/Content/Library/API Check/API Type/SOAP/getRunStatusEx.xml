@@ -105,7 +105,7 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <isPersisted>false</isPersisted>
       <inputSymbol>getRunStatusEx.runHandle.runID</inputSymbol>
       <listDelimiter>,</listDelimiter>
-      <value>124522990</value>
+      <value>194001600</value>
       <record>false</record>
     </staticBinding>
     <staticBinding id="da9d436d-882d-41a7-bd50-d2bdbf33bdf1">
@@ -122,11 +122,6 @@ eba039c5-aabd-4a47-aaac-72264da29221.description=<pre>\nThis subflow was created
       <record>false</record>
     </staticBinding>
   </inputs>
-  <scriptlet id="fcd5136e-2813-4b9f-8d56-ea5c7af16779">
-    <annotation></annotation>
-    <name>Operation getRunStatusEx (eba039c5-aabd-4a47-aaac-72264da29221)</name>
-    <type>RHINO</type>
-  </scriptlet>
   <possibleResponses>
     <opResponse id="b360a021-d670-4bd3-a657-4b1057ce4fd4">
       <annotation></annotation>
@@ -962,12 +957,6 @@ getRunStatusEx|runHandle|statusCursor|cursorPosition=getRunStatusEx.runHandle.st
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
-      <iconSpec id="42d543b8-78af-4dd3-b41d-f1492a0bcb1e">
-        <baseIcon>return_success.png</baseIcon>
-        <basePath>System</basePath>
-        <readOnly>true</readOnly>
-        <layers/>
-      </iconSpec>
       <addResultToRunContext>false</addResultToRunContext>
       <isCriticalStep>false</isCriticalStep>
       <isNonBlocking>false</isNonBlocking>

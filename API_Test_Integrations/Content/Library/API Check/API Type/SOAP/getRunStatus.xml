@@ -79,7 +79,7 @@
       <isPersisted>false</isPersisted>
       <inputSymbol>getRunStatus.runHandle.runID</inputSymbol>
       <listDelimiter>,</listDelimiter>
-      <value>124522990</value>
+      <value>194001600</value>
       <record>false</record>
     </staticBinding>
     <staticBinding id="c2ae8286-3fd5-4213-9f16-b56d7635688f">
@@ -96,11 +96,6 @@
       <record>false</record>
     </staticBinding>
   </inputs>
-  <scriptlet id="9af615fb-b1aa-465e-97e9-a609cae7709b">
-    <annotation></annotation>
-    <name>Operation getRunStatus (20f048ff-c9e1-443f-a99d-5d9fc706aab7)</name>
-    <type>RHINO</type>
-  </scriptlet>
   <possibleResponses>
     <opResponse id="cff6eea7-e42f-43b4-bbba-c10e5fd6acf8">
       <annotation></annotation>
@@ -770,6 +765,51 @@ getRunStatus|runHandle|statusCursor|cursorPosition=getRunStatus.runHandle.status
       </assignments>
       <throttleSize>0</throttleSize>
     </step>
+    <returnStep id="136fb6eb-8d8c-498d-95ce-7f3f4ff8b933">
+      <annotation>20f048ff-c9e1-443f-a99d-5d9fc706aab7.136fb6eb-8d8c-498d-95ce-7f3f4ff8b933.description</annotation>
+      <name>RESOLVED : success</name>
+      <bounds>
+        <x>0.0</x>
+        <y>150.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>true</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>false</checkPointStep>
+      <historyCheckPointStep>false</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <resultContextKey>RESOLVED : success</resultContextKey>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="60319fd7-fa53-4100-a500-9bde4bfff52a">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>136fb6eb-8d8c-498d-95ce-7f3f4ff8b933</refId>
+          </destination>
+          <source>
+            <refId>136fb6eb-8d8c-498d-95ce-7f3f4ff8b933</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
     <returnStep id="86e489c4-7faa-457a-bbeb-0b2b2fa7ebd6">
       <annotation>20f048ff-c9e1-443f-a99d-5d9fc706aab7.86e489c4-7faa-457a-bbeb-0b2b2fa7ebd6.description</annotation>
       <name>ERROR : failure</name>
@@ -813,57 +853,6 @@ getRunStatus|runHandle|statusCursor|cursorPosition=getRunStatus.runHandle.status
       </transitions>
       <properties/>
       <returnStepType>ERROR</returnStepType>
-      <assignments/>
-    </returnStep>
-    <returnStep id="136fb6eb-8d8c-498d-95ce-7f3f4ff8b933">
-      <annotation>20f048ff-c9e1-443f-a99d-5d9fc706aab7.136fb6eb-8d8c-498d-95ce-7f3f4ff8b933.description</annotation>
-      <name>RESOLVED : success</name>
-      <bounds>
-        <x>0.0</x>
-        <y>150.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <iconSpec id="7524bb66-05a4-4403-9af5-fc7716cdebb5">
-        <baseIcon>return_success.png</baseIcon>
-        <basePath>System</basePath>
-        <readOnly>true</readOnly>
-        <layers/>
-      </iconSpec>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>true</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>false</checkPointStep>
-      <historyCheckPointStep>false</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <resultContextKey>RESOLVED : success</resultContextKey>
-      <userPrompt></userPrompt>
-      <bindings/>
-      <transitions>
-        <transition id="60319fd7-fa53-4100-a500-9bde4bfff52a">
-          <annotation></annotation>
-          <name>success</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>success</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>136fb6eb-8d8c-498d-95ce-7f3f4ff8b933</refId>
-          </destination>
-          <source>
-            <refId>136fb6eb-8d8c-498d-95ce-7f3f4ff8b933</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>RESOLVED</returnStepType>
       <assignments/>
     </returnStep>
   </steps>

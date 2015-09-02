@@ -6,11 +6,6 @@
   <name>Get flow run summary WIP</name>
   <categories/>
   <inputs/>
-  <scriptlet id="4c5d8c1c-bebc-49ef-bf93-c30aeccc09d7">
-    <annotation></annotation>
-    <name>Operation Get flow run (67e3a0a2-1152-4271-bee6-aefde325e20b)</name>
-    <type>RHINO</type>
-  </scriptlet>
   <possibleResponses>
     <opResponse id="4e80e25a-75b5-4feb-8cfc-91c7c0efe155">
       <annotation></annotation>
@@ -257,11 +252,55 @@
       <assignments/>
       <throttleSize>0</throttleSize>
     </step>
+    <returnStep id="a0f81d70-4668-4d30-a553-2030aeddf10c">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>259.0</x>
+        <y>67.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="637d2766-eec2-48bc-b7bd-5902bc0edd5c">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>a0f81d70-4668-4d30-a553-2030aeddf10c</refId>
+          </destination>
+          <source>
+            <refId>a0f81d70-4668-4d30-a553-2030aeddf10c</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
     <returnStep id="dd7419d5-5102-4926-b0a8-891e4885b0e2">
       <annotation></annotation>
       <name>Error : failure</name>
       <bounds>
-        <x>98.0</x>
+        <x>88.0</x>
         <y>254.0</y>
       </bounds>
       <layer>-1</layer>
@@ -299,50 +338,6 @@
       </transitions>
       <properties/>
       <returnStepType>ERROR</returnStepType>
-      <assignments/>
-    </returnStep>
-    <returnStep id="a0f81d70-4668-4d30-a553-2030aeddf10c">
-      <annotation></annotation>
-      <name>Resolved : success</name>
-      <bounds>
-        <x>259.0</x>
-        <y>55.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>false</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>true</checkPointStep>
-      <historyCheckPointStep>true</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <userPrompt></userPrompt>
-      <bindings/>
-      <transitions>
-        <transition id="637d2766-eec2-48bc-b7bd-5902bc0edd5c">
-          <annotation></annotation>
-          <name>return</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>success</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>a0f81d70-4668-4d30-a553-2030aeddf10c</refId>
-          </destination>
-          <source>
-            <refId>a0f81d70-4668-4d30-a553-2030aeddf10c</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>RESOLVED</returnStepType>
       <assignments/>
     </returnStep>
   </steps>

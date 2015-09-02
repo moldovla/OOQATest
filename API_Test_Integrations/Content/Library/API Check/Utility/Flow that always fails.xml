@@ -6,11 +6,6 @@
   <name>Flow that always fails</name>
   <categories/>
   <inputs/>
-  <scriptlet id="d263a068-e165-49e0-b2c2-538d8b1a8945">
-    <annotation></annotation>
-    <name>Operation Flow that always fails (1808bec2-e326-41ab-a219-1497185161a1)</name>
-    <type>RHINO</type>
-  </scriptlet>
   <possibleResponses>
     <opResponse id="7ffff520-4e63-4627-b5a2-c566aaeef031">
       <annotation></annotation>
@@ -231,6 +226,50 @@
       <assignments/>
       <throttleSize>0</throttleSize>
     </step>
+    <returnStep id="c9b04068-5e5d-4f28-b909-d9f6ba4da5c3">
+      <annotation></annotation>
+      <name>Resolved : success</name>
+      <bounds>
+        <x>442.0</x>
+        <y>94.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>false</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt></userPrompt>
+      <bindings/>
+      <transitions>
+        <transition id="b9b02296-4b4f-4b54-ab5a-6c9811488ff1">
+          <annotation></annotation>
+          <name>return</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>c9b04068-5e5d-4f28-b909-d9f6ba4da5c3</refId>
+          </destination>
+          <source>
+            <refId>c9b04068-5e5d-4f28-b909-d9f6ba4da5c3</refId>
+          </source>
+          <positions/>
+        </transition>
+      </transitions>
+      <properties/>
+      <returnStepType>RESOLVED</returnStepType>
+      <assignments/>
+    </returnStep>
     <returnStep id="bc08737f-b47d-4f35-b0b5-28f07dca2a91">
       <annotation></annotation>
       <name>Error : failure</name>
@@ -273,50 +312,6 @@
       </transitions>
       <properties/>
       <returnStepType>ERROR</returnStepType>
-      <assignments/>
-    </returnStep>
-    <returnStep id="c9b04068-5e5d-4f28-b909-d9f6ba4da5c3">
-      <annotation></annotation>
-      <name>Resolved : success</name>
-      <bounds>
-        <x>442.0</x>
-        <y>89.0</y>
-      </bounds>
-      <layer>-1</layer>
-      <hideInbound>false</hideInbound>
-      <addResultToRunContext>false</addResultToRunContext>
-      <isCriticalStep>false</isCriticalStep>
-      <isNonBlocking>false</isNonBlocking>
-      <isParallelStep>false</isParallelStep>
-      <isSingleResponse>false</isSingleResponse>
-      <recordInHistory>false</recordInHistory>
-      <recordRawOutput>true</recordRawOutput>
-      <recordPrimaryOutput>true</recordPrimaryOutput>
-      <checkPointStep>true</checkPointStep>
-      <historyCheckPointStep>true</historyCheckPointStep>
-      <scriptResultStep>false</scriptResultStep>
-      <userPrompt></userPrompt>
-      <bindings/>
-      <transitions>
-        <transition id="b9b02296-4b4f-4b54-ab5a-6c9811488ff1">
-          <annotation></annotation>
-          <name>return</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>success</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>c9b04068-5e5d-4f28-b909-d9f6ba4da5c3</refId>
-          </destination>
-          <source>
-            <refId>c9b04068-5e5d-4f28-b909-d9f6ba4da5c3</refId>
-          </source>
-          <positions/>
-        </transition>
-      </transitions>
-      <properties/>
-      <returnStepType>RESOLVED</returnStepType>
       <assignments/>
     </returnStep>
   </steps>
