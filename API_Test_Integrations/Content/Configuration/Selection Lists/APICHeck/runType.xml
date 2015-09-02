@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selectionList id="e7f6acb4-94ec-4a71-a5dd-4422e2688822">
+  <descriptionCdata><![CDATA[]]></descriptionCdata>
+  <annotation></annotation>
+  <name>runType</name>
+  <storage>
+    <string>Short</string>
+    <string>Long</string>
+  </storage>
+</selectionList>

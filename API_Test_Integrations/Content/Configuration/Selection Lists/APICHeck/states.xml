@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selectionList id="2eb54481-e3c2-4b93-8054-336cf79baa55">
+  <descriptionCdata><![CDATA[]]></descriptionCdata>
+  <annotation></annotation>
+  <name>states</name>
+  <storage>
+    <string>CANCEL</string>
+    <string>PAUSE</string>
+    <string>REASSIGN</string>
+    <string>RESUME</string>
+  </storage>
+</selectionList>
